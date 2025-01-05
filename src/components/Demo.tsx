@@ -1,4 +1,31 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 const Demo = () => {
+  const [impulseResponse, setImpulseResponse] = useState([]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    // Define an async function to handle API call
+    const fetchImpulseResponse = async () => {
+      try {
+        const response = await axios.get(
+          "https://tok-model-jd4k.vercel.app/systems/best_impulse_response"
+        );
+        // Set the data in state
+        setImpulseResponse(response.data);
+      } catch (err) {
+        console.error("Error fetching the impulse response:", err);
+        setError("Unable to fetch data. Please try again later.");
+      }
+    };
+    fetchImpulseResponse(); 
+  }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div className="min-h-screen gap-4 text-white relative px-5 py-10">
       <img
@@ -17,6 +44,8 @@ const Demo = () => {
         placeat! Nobis veniam, minus qui obcaecati aliquid mollitia blanditiis
         cumque quaerat?
       </p>
+
+      {impulseResponse}
 
       <div className="grid h-screen gap-4 place-items-center my-4 md:grid-cols-3 md:h-[50vh] max-w-[320px] md:max-w-[1024px] mx-auto ">
         <div className="bg-red-600 rounded-full size-48 md:size-60 lg:size-80 animate-pulse-custom"></div>
