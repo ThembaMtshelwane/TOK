@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="min-h-screen grid md:grid-cols-2 items-center lg:px-5 my-20 gap-4">
-      <div className="h-full w-full aspect-video">
+      <div className="hidden md:block h-full w-full aspect-video">
         <iframe
           className="w-full h-full"
           src="https://www.youtube.com/embed/cvC_deZuDDg"
@@ -15,6 +15,16 @@ const About = () => {
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold mb-5">
           History
         </h2>
+        <div className="md:hidden h-full w-full aspect-video mb-4">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/cvC_deZuDDg"
+            title="Acoustics at Chichen Itza"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
         <p className="text-justify">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
           blanditiis est laborum doloremque debitis beatae excepturi eius ad, id
