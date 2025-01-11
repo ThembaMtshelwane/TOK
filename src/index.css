@@ -2,17 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes pulse-custom {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.05);
-      opacity: 0.8;
-    }
-  }
+html {
+  scrollbar-width: none;
+}
 
-  .animate-pulse-custom {
-    animation: pulse-custom 1.5s infinite;
+@keyframes pulse-custom {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-custom {
+  animation: pulse-custom 1.5s infinite;
+}

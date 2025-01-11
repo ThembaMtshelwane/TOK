@@ -49,7 +49,7 @@ const Demo = () => {
             placeat! Nobis veniam, minus qui obcaecati aliquid mollitia
             blanditiis cumque quaerat?
           </p>
-          <div className="grid h-screen gap-4 place-items-center my-4 md:grid-cols-3 md:h-[50vh] max-w-[320px] md:max-w-[1024px] mx-auto ">
+          <div className="grid h-screen gap-4 place-items-center my-4 md:grid-cols-3 w-[100%] md:h-[50vh] max-w-[320px] md:max-w-[1440px] mx-auto ">
             <div className="size-48 md:size-60 lg:size-80 animate-pulse-custom">
               <img src="hand-clap.png" className="scale-95" alt="" />
             </div>
