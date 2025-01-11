@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Demo = () => {
   const [impulseResponse, setImpulseResponse] = useState([]);
   const [error, setError] = useState("");
-  const [isloading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Define an async function to handle API call
@@ -55,7 +55,7 @@ const Demo = () => {
             </div>
 
             <div className="bg-red-600 rounded-full size-48 md:size-60 lg:size-80 place-items-center place-content-center">
-              {isloading ? <p>Loading...</p> : <img src="system.jpg" alt="" className="h-full w-full object-cover object-center rounded-full"/>}
+              {isLoading ? <p>Loading...</p> : <img src="system.jpg" alt="" className="h-full w-full object-cover object-center rounded-full"/>}
             </div>
 
             <div className=" rounded-full size-48 md:size-60 lg:size-80 animate-pulse-custom flex">
