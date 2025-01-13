@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="min-h-screen grid md:grid-cols-2 items-center lg:px-5 my-20 gap-4">
+    <div className="min-h-screen grid md:grid-cols-2 items-center lg:px-5 my-40 gap-4">
       <div className="hidden md:block h-full w-full aspect-video">
         <iframe
           className="w-full h-full"
