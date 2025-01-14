@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import AudioRecorder from "./AudioRecorder";
 
 const Demo = () => {
   const [impulseResponse, setImpulseResponse] = useState([]);
@@ -49,11 +50,9 @@ const Demo = () => {
             blanditiis cumque quaerat?
           </p>
           <div className="grid h-screen gap-4 place-items-center my-4 md:grid-cols-3 w-[100%] md:h-[50vh] max-w-[320px] md:max-w-[1440px] mx-auto ">
-            <div className="size-48 md:size-60 lg:size-80 animate-pulse-custom">
-              <img src="hand-clap.png" className="scale-95" alt="" />
-            </div>
+            <AudioRecorder />
 
-            <div className=" size-48 md:size-60 lg:size-80 place-items-center place-content-center">
+            <div className=" system-component place-items-center place-content-center">
               {isLoading ? (
                 <p>Loading...</p>
               ) : (
@@ -65,7 +64,7 @@ const Demo = () => {
               )}
             </div>
 
-            <div className=" rounded-full size-48 md:size-60 lg:size-80 animate-pulse-custom flex">
+            <div className=" rounded-full system-component animate-pulse-custom flex">
               <img
                 src="q-bird.png"
                 className="h-full w-full object-cover object-center"

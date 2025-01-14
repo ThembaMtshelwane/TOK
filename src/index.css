@@ -6,6 +6,9 @@ html {
   scrollbar-width: none;
 }
 
+.system-component {
+  @apply size-48 md:size-60 lg:size-80;
+}
 @keyframes pulse-custom {
   0%,
   100% {
