@@ -23,7 +23,7 @@ const AudioRecorder = () => {
       };
 
       // Start recording in 0.1s chunks
-      mediaRecorder.start(100); // Record in 100ms chunks
+      mediaRecorder.start(5000); // Record in 100ms chunks
       mediaRecorderRef.current = mediaRecorder;
 
       setIsRecording(true);
